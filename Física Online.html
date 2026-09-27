@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>F&#237;sica Online</title>
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/body.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body class="body">
+    <div class="header">
+      <div class="logo">
+        <img class="logo-image" src="Group 1.png">
+        <div class="logo-name">
+          F&#237;sica Online
+        </div>
+      </div>
+      <div class="menu">
+        <a class="menu-guias" href="#guias" data-target="#guias">Gu&#237;as</a>
+        <a class="menu-simulaciones" href="#simulaciones" data-target="#simulaciones">Simulaciones</a>    
+      </div>
+      <button id="btn-modo" onclick="toggleModoOscuro()" class="modo-oscuro">Modo Oscuro</button>
+    </div>
+  <div class="main-body">
+      Esta p&#225;gina fue hecha con el motivo de que cualquiera pueda aprender f&#237;sica de preparatoria, sin importar que tanto conocimiento tenga en el tema, con gu&#237;as y simulaciones para facilitar el aprendizaje. Las gu&#237;as pueden llegar a ser &#250;tiles tanto para ex&#225;menes en tu preparatoria, ex&#225;menes de admisi&#243;n, e incluso, o incluso si est&#225;s estudiando para una olimpiada, ya que estas tambi&#233;n tienen contenido de ex&#225;menes de olimpiada, como de ex&#225;menes nacionales, que si quieres checar m&#225;s a detalle, se encuentran en la p&#225;gina: <a href="https://smf.mx/programas/olimpiada-nacional-de-fisica/examenes/" target="_blank">https://smf.mx/programas/olimpiada-nacional-de-fisica/examenes/</a> 
+      <section id="guias">
+        <div class="guias">Gu&#237;as</div>
+        <div class="contenido">
+          Las gu&#237;as incluyen todo el contenido del temario de preparatoria, y te ense&#241;an los temas desde el principio, ya que asumen que nunca los hab&#237;as visto.
+        </div>
+        <div class="contenido">- Recomendaciones generales: <a href="Recomendaciones.pdf" target="_blank">Recomendaciones</a></div>
+        <div class="contenido">- Resoluci&#243;n de problemas: <a href="R-M.pdf" target="_blank">Resoluci&#243;n de problemas: Matem&#225;ticas</a>, <a href="R.pdf" target="_blank">Resoluci&#243;n de problemas</a></div>
+        <div class="contenido">- Mec&#225;nica: <a href="M-1.pdf" target="_blank">Mec&#225;nica 1</a></div>
+        <div class="contenido">- Termodin&#225;mica:</div>
+        <div class="contenido">- Electromagnetismo:</div>
+        <div class="contenido">- Ondas:</div>
+      </section>
+      <section id="simulaciones">
+        <div class="simulaciones">Simulaciones</div>
+        <div>
+          <div class="contenido">- Tiro parab&#243;lico: <a href="https://tiro-parabolico-k6ieapj2ifctappmcettewf.streamlit.app/" target="_blank">https://tiro-parabolico-k6ieapj2ifctappmcettewf.streamlit.app/</a></div>
+          <div class="contenido">- &#211;rbitas: <a href="https://orbitas-au2cuytxs3fxhwkajjpfca.streamlit.app/" target="_blank">https://orbitas-au2cuytxs3fxhwkajjpfca.streamlit.app/</a></div>
+        </div>
+      </section>
+  </div>
+    <script>
+      const btnModo = document.getElementById('btn-modo');
+      if (localStorage.getItem('theme') === 'dark'){
+          document.body.classList.add('dark-mode');
+          btnModo.textContent = 'Modo Claro';
+      }
+      function toggleModoOscuro(){
+        document.body.classList.toggle('dark-mode');
+        const esOscuro = document.body.classList.contains('dark-mode');
+        localStorage.setItem('theme', esOscuro ? 'dark':'light');
+        btnModo.textContent = esOscuro ? 'Modo Claro' : 'Modo Oscuro';
+      }
+    </script>
+  </body>
+</html>
