@@ -1,0 +1,76 @@
+.header{
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  height:80px;
+  background-color: rgb(27, 27, 161);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo{
+  margin-left: 20px;
+  flex-shrink: 0;
+  display: flex;
+}
+.logo-name{
+  font-size: 40px;
+  font-family: Roboto, Arial;
+  font-weight: 600;
+  color: white;
+  margin-left:20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.logo-image{
+  width: 55px;
+}
+.menu{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  width: auto;
+  margin-right: 10px;
+  margin-left: auto;
+}
+.menu-guias{
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  font-family: Arial;
+}
+.menu-simulaciones{
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  font-family: Arial;
+}
+@media (max-width: 650px){
+  .menu{
+    display: none;
+  }
+}
+.modo-oscuro{
+  font-family: Roboto, Arial;
+  font-size: 14px;
+  font-weight: bold;
+  background-color:white;
+  color:rgb(28, 28, 28);
+  border-width: 1px;
+  border-style:solid;
+  border-color:white;
+  border-radius: 6px;
+  padding-top:5px;
+  padding-bottom: 5px;
+  transition: background-color 0.5s;
+  transition: color 0.5s;
+  transition: border-color 0.5s;
+  margin-right: 20px;
+}
+.modo-oscuro:hover{
+  background-color: rgb(28, 28, 28);
+  color:white;
+  border-color: rgb(28, 28, 28);
+  cursor: pointer;
+}
