@@ -50,6 +50,9 @@
   .menu{
     display: none;
   }
+  header h1{
+    font-size: 1.3rem;
+  }
 }
 .modo-oscuro{
   font-family: Roboto, Arial;
